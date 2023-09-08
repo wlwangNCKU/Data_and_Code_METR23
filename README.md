@@ -3,13 +3,13 @@ Supplement: "Bayesian multivariate nonlinear mixed models for censored longitudi
 
 README
 
-############################################################################################
+#######################################################################################
 
 Source code and data for the manuscript 
 "Bayesian multivariate nonlinear mixed models for censored longitudinal trajectories with non-monotone missing values",
 by Wan-Lun Wang, Luis M. Castro, and Tsung-I Lin*
 
-############################################################################################
+#######################################################################################
 
 # Configurations
 The code was written/evaluated in R with the following software versions:
