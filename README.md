@@ -2,6 +2,7 @@
 Supplement: "Bayesian multivariate nonlinear mixed models for censored longitudinal trajectories with non-monotone missing values"
 
 README
+
 ############################################################################################
 
 Source code and data for the manuscript 
@@ -54,64 +55,71 @@ R codes for the implementation of our methodology are provided.
 ## Subfolder: ./function ##
 ./function
 	contains the program (function) of
-                 (1) 'mnlmm.na.fn.r' for carrying out EM-based maximum likelihood (ML) estimation of multivariate nonlinear mixed models (MNLMM) with missing data;
-                 (2) 'mnlmmcm.fn.r' for carrying out EM-based ML estimation of multivariate nonlinear mixed models with censored and missing responses (MNLMM-CM);
-		 (3) 'Bay.mnlmm.na.fn.r' for performing Bayesian estimation of MNLMM with missing data; and
-		 (4) 'Bay.mnlmm.na.fn.r' for performing Bayesian estimation of MNLMM-CM for simulation studies.
-
-                 (5) 'mnlmm.na.fn2.r' for carrying out EM-based ML estimation of MNLMM with missing data;
-                 (6) 'mnlmmcm.fn2.r' for carrying out EM-based ML estimation of MNLMM-CM;
-		 (7) 'Bay.mnlmm.na.fn2.r' for performing Bayesian estimation of MNLMM with missing data; and
-		 (8) 'Bay.mnlmm.na.fn2.r' for performing Bayesian estimation of MNLMM-CM for the A5055 data example.
+ 
+ 	(1) 'mnlmm.na.fn.r' for carrying out EM-based maximum likelihood (ML) estimation of multivariate nonlinear mixed models (MNLMM) with missing data;
+  	(2) 'mnlmmcm.fn.r' for carrying out EM-based ML estimation of multivariate nonlinear mixed models with censored and missing responses (MNLMM-CM);
+   	(3) 'Bay.mnlmm.na.fn.r' for performing Bayesian estimation of MNLMM with missing data; and
+    (4) 'Bay.mnlmm.na.fn.r' for performing Bayesian estimation of MNLMM-CM for simulation studies.
+    (5) 'mnlmm.na.fn2.r' for carrying out EM-based ML estimation of MNLMM with missing data;
+    (6) 'mnlmmcm.fn2.r' for carrying out EM-based ML estimation of MNLMM-CM;
+    (7) 'Bay.mnlmm.na.fn2.r' for performing Bayesian estimation of MNLMM with missing data; and
+    (8) 'Bay.mnlmm.na.fn2.r' for performing Bayesian estimation of MNLMM-CM for the A5055 data example.
 
 ## Subfolder: ./code ##
 ./code
-       contains (1) 'sim.r' main script for re-generating part of intermediate results for simualtion (note: The cases of sample sizes 'N=25', 'N=50', 'N=75' and 'N=100' should be done separately.);
-                (2) 'SIMfig1.r' main script for reproducting Fig. 1; 
-		(3) 'SIMfig2.r' main script for reproducting Fig. 2;
-		(4) 'SIMfigS1.r' main script for reproducting Fig. S.1;
-		(5) 'SIMtabS1.r' main script for reproducting Table S.1;
-
-		(6) 'Tab1.r' main script for reproducting Table 1 (load 'A5055FitResult.RData' directly, and then run 'Tab1.r'); 
-		(7) 'Tab2.r' main script for reproducting Table 2 (load 'A5055FitResult.RData' directly, and then run 'Tab2.r');
-		(8) 'TabS2.r' main script for reproducting Table S.2;
-		(9) 'Fig3.r' main script for reproducting Fig. 3;
-		(10) 'Fig4.r' main script for reproducting Fig. 4 (load 'A5055FitResult.RData' directly, and then run 'Fig4.r');
-		(11) 'FigS2.r' main script for reproducting Fig. S.2;
-		(12) 'A5055Fit.r' main script for performing ML and Bayesian model fitting to the A5055 dataset.
+       contains 
+       	
+	(1) 'sim.r' main script for re-generating part of intermediate results for simualtion (note: The cases of sample sizes 'N=25', 'N=50', 'N=75' and 'N=100' should be done separately.);
+	(2) 'SIMfig1.r' main script for reproducting Fig. 1; 
+	(3) 'SIMfig2.r' main script for reproducting Fig. 2;
+	(4) 'SIMfigS1.r' main script for reproducting Fig. S.1;
+	(5) 'SIMtabS1.r' main script for reproducting Table S.1;
+ 	(6) 'Tab1.r' main script for reproducting Table 1 (load 'A5055FitResult.RData' directly, and then run 'Tab1.r'); 
+	(7) 'Tab2.r' main script for reproducting Table 2 (load 'A5055FitResult.RData' directly, and then run 'Tab2.r');
+	(8) 'TabS2.r' main script for reproducting Table S.2;
+	(9) 'Fig3.r' main script for reproducting Fig. 3;
+	(10) 'Fig4.r' main script for reproducting Fig. 4 (load 'A5055FitResult.RData' directly, and then run 'Fig4.r');
+	(11) 'FigS2.r' main script for reproducting Fig. S.2;
+	(12) 'A5055Fit.r' main script for performing ML and Bayesian model fitting to the A5055 dataset.
 
 ### Note for Section 4 - Simulation
+
 (1) R code 'sim.r' generates the intermediate results of Figs. 1-2 in the manuscript and Fig. S.1 and Table S.1 in the supplementary materials.
+
 (2) To conduct simulation studies, please source the 'sim.r' script in subfolder "./code/", and then run the 'SIMfig1.r', 'SIMfig2.r', 'SIMfigS1' and 'SIMtabS1' scripts in subfolder "./code/".
-(3) Because the code takes a huge amount of time to run, we record these intermediate results so that 
-    one can use the R codes 'SIMfig1.r', 'SIMfig2.r', 'SIMfigS1' and 'SIMtabS1' to obtain the final results based on files stored in "./results/N=25", "./results/N=50", "./results/N=75" and '"./results/N=100"' subfolders.
+
+(3) Because the code takes a huge amount of time to run, we record these intermediate results so that one can use the R codes 'SIMfig1.r', 'SIMfig2.r', 'SIMfigS1' and 'SIMtabS1' to obtain the final results based on files stored in "./results/N=25", "./results/N=50", "./results/N=75" and '"./results/N=100"' subfolders.
 
 ### Note for Section 5 - Application to A5055 data
+
 (1) Because the 'A5055Fit.r' code takes a huge amount of time to run the MCMC sampling procedure for Bayesian model fitting, we record these intermediate results in 'A5055FitResults.RData' so that 
     one can use the R codes 'Tab1.r', 'Tab2.r' and 'Fig4' to obtain the final results immediately.
+
 (2) To reproduce the results presented in Tables 1-2 and Figure 4, just load 'A5055FitResult.RData' file in the "./data/" 
     and then run the script 'Tab1.r', 'Tab2.r', and 'Fig4.r' in the subfolder "./code/". 
 
 ## Subfolder: ./data ##
 ./data
       contains
+      
       (1) 'A5055data.txt': the dataset for the A5055 HIV-AIDS study;
       (2) 'A5055FitResult.RData': the fitting results for A5055 dataset.
 
 ## Subfolder: ./results ##
 ./results
       contains 
-                (1) 'SIMfig1.eps': (Fig. 1) boxplots of the mean squared errors for the posterior estimates of entire model parameters obtained by fitting the MNLMM-CM and MNLMM;
-		(2) 'SIMfig2.eps': (Fig. 2) split violin plots of the mean squared errors for the posterior mean of fitted responses;
-		(3) 'SIMfigS1.eps': (Supplementary Fig. S.1) mean squared errors for the posterior estimates of parameters obtained by fitting the MNLMM-CM and MNLMM;
-		(4) 'SIMtabS1.csv': (Supplementary Table S.1) coverage probabilities and average lengths of the 95% posterior credible intervals for model parameters;
+        
+	(1) 'SIMfig1.eps': (Fig. 1) boxplots of the mean squared errors for the posterior estimates of entire model parameters obtained by fitting the MNLMM-CM and MNLMM;
+	(2) 'SIMfig2.eps': (Fig. 2) split violin plots of the mean squared errors for the posterior mean of fitted responses;
+ 	(3) 'SIMfigS1.eps': (Supplementary Fig. S.1) mean squared errors for the posterior estimates of parameters obtained by fitting the MNLMM-CM and MNLMM;
+  	(4) 'SIMtabS1.csv': (Supplementary Table S.1) coverage probabilities and average lengths of the 95% posterior credible intervals for model parameters;
 
-		(5) 'Tab1.csv': (Table 1) Bayesian model selection criteria under the six competing models for the A5055 data;
-		(6) 'Tab2.csv': (Table 2) posterior estimates under the fitted MNLMM with DEC errors and MNLMM-CM with AR(1) errors for the A5055 data;
-		(7) 'TabS2.csv': (Supplementary Table S.2) calculating averages (Mean) and standard deviations (SD) of log10(RNA) and CD4/CD8 ratios at scheduled days after drug-regimen treatments;
-		(8) 'Fig3a.eps' & 'Fig3b.eps': (Fig. 3) showing censoring and missingness patterns for the A5055 data;
-		(9) 'Fig4.eps': (Fig. 4) showing observations, fitted values and 95% posterior bands of responses, and imputed values and 95% posterior credible intervals for missing CD4/CD8 ratios;
-		(10) 'FigS2.eps': (Supplementary Fig. S.2) drawing trajectory plot for the log10(RNA) and CD4/CD8 ratios of 44 patients in the A5055 dataset;
+	(5) 'Tab1.csv': (Table 1) Bayesian model selection criteria under the six competing models for the A5055 data;
+ 	(6) 'Tab2.csv': (Table 2) posterior estimates under the fitted MNLMM with DEC errors and MNLMM-CM with AR(1) errors for the A5055 data;
+  	(7) 'TabS2.csv': (Supplementary Table S.2) calculating averages (Mean) and standard deviations (SD) of log10(RNA) and CD4/CD8 ratios at scheduled days after drug-regimen treatments;
+   	(8) 'Fig3a.eps' & 'Fig3b.eps': (Fig. 3) showing censoring and missingness patterns for the A5055 data;
+    (9) 'Fig4.eps': (Fig. 4) showing observations, fitted values and 95% posterior bands of responses, and imputed values and 95% posterior credible intervals for missing CD4/CD8 ratios;
+    (10) 'FigS2.eps': (Supplementary Fig. S.2) drawing trajectory plot for the log10(RNA) and CD4/CD8 ratios of 44 patients in the A5055 dataset;
 
 ./results/N=25; ./results/N=50; ./results/N=75; ./results/N=100
       contain intermediately numerical results from the simulation studies under four different sample sizes.
